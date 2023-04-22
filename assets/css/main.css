@@ -1,0 +1,137 @@
+html{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+a{
+    text-decoration: none; /*para que no tenga la rayita*/
+    color: #50116d;
+}
+a:hover{
+    opacity: 0.5;
+}
+img{
+    max-width: 100%;
+}
+.title{
+    text-transform: uppercase;/*poner en mayusculas*/
+    text-align: center;
+}
+.paragraph{
+    line-height: 1.8em;/*Espacio entre linea*/
+    font-weight: 400;/*ancho de la letra*/
+}
+
+.container{
+    background: #7F7FD5;  /* Color solido en caso de que no se muestre el degradado */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;/*vh alto total de la pantalla*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    max-width: 960px;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    position: relative;
+    padding: 1em;
+    overflow-y: scroll; 
+}
+
+td{
+    display: block;/*tranformar columnasen filas*/
+    width: 100%;
+}
+td:nth-of-type(1){
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #50116d;
+}
+th{
+    display: none;/*oculta encabezado*/
+}
+.actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.close{
+    height: 35px;
+    width: 35px;
+    color: white;
+    border-radius: 50%;/*Para que sea redondo*/
+    background-color: #2089a3;
+    display: inline-block;/*Porque si no ignorará los tamaños que le asignamos*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-weight: 300;
+    cursor: pointer;/*poner la manito del cursor*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-star, .fa-star-o{
+    color: #ffc400;
+}
+.table{
+    width: 100%;
+    border-spacing: 0;/*para que no haya espacio entre celdas*/
+}
+.table td, .table th{
+    padding: 1em;
+    text-align: left;
+}
+.table tr:nth-child(even){
+    background-color: #d8cdd6;}/*Cuando se pone odd en ver de even se colorean los impares*/
+.title-item{
+    /*border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #50116d;*/
+    font-size: 2em;
+    border-bottom: #50116d solid 2px;
+    padding: 1em; /*Espacio en blanco*/
+}
+.capitulo{
+    font-weight: bold;
+    color:#7a1a6a;
+    font-size: 1.2em;
+    margin-top: 2em;
+    display: inline-block;
+}
+.position{
+    background-color: #50116d;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+.main-image{
+    float: left; /* la imagen se pondra a la izq*/
+    margin-right: 1em;/*para que no este tan pegado al texto*/
+    height: 350px;/*para que no este tan alta(grande)*/
+}
+@media (min-width:900px){
+    .content{
+        padding: 1.8em;
+    }
+    td{
+        display: table-cell;/*Devuelve a tabla*/
+        width: auto;
+    }
+    td:nth-of-type(1){
+        font-size: 1em;
+        font-weight: bold;
+        color: #50116d;
+    }
+    th{
+        display: table-cell;
+    }
+}
+@media (min-height:550px){
+    .content{
+        height: 500px;
+    }
+}
